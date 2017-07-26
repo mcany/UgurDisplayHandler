@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ugurface" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Z-Jy-7LB">
+                                <rect key="frame" x="5" y="494" width="365" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to select an image, and tap on detected rectangles" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-El-I60">
+                                <rect key="frame" x="15" y="162" width="345" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-W2-lZO">
+                                <rect key="frame" x="5" y="346" width="365" height="316"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dXP-CV-AHG" appends="YES" id="oZR-Lh-9Hp"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AvI-gu-R7s">
+                                <rect key="frame" x="5" y="25" width="365" height="316"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4KH-Eh-OgW" appends="YES" id="0Vl-rV-Nhq"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TKr-W2-lZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="2H4-5A-Ylh"/>
+                            <constraint firstItem="Z6Z-Jy-7LB" firstAttribute="leading" secondItem="TKr-W2-lZO" secondAttribute="leading" id="Bgd-qm-esK"/>
+                            <constraint firstItem="Z6Z-Jy-7LB" firstAttribute="centerY" secondItem="TKr-W2-lZO" secondAttribute="centerY" id="Em8-6f-Jo6"/>
+                            <constraint firstItem="TKr-W2-lZO" firstAttribute="height" secondItem="AvI-gu-R7s" secondAttribute="height" id="GoE-u7-hxD"/>
+                            <constraint firstItem="Z6Z-Jy-7LB" firstAttribute="trailing" secondItem="TKr-W2-lZO" secondAttribute="trailing" id="M45-wT-Ygr"/>
+                            <constraint firstItem="AvI-gu-R7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="WsP-gU-XXt"/>
+                            <constraint firstItem="bNO-El-I60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Ywe-x5-ixU"/>
+                            <constraint firstItem="bNO-El-I60" firstAttribute="centerY" secondItem="AvI-gu-R7s" secondAttribute="centerY" id="YzR-8B-Dvr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bNO-El-I60" secondAttribute="trailing" constant="15" id="ZTn-t3-159"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TKr-W2-lZO" secondAttribute="bottom" constant="5" id="aov-hR-9ql"/>
+                            <constraint firstItem="AvI-gu-R7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="fMz-cV-QPb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TKr-W2-lZO" secondAttribute="trailing" constant="5" id="igM-ns-yQd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AvI-gu-R7s" secondAttribute="trailing" constant="5" id="wxF-lw-vtI"/>
+                            <constraint firstItem="TKr-W2-lZO" firstAttribute="top" secondItem="AvI-gu-R7s" secondAttribute="bottom" constant="5" id="zaz-Gt-MPY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImageView" destination="TKr-W2-lZO" id="L3P-NZ-qJ7"/>
+                        <outlet property="sourceImageView" destination="AvI-gu-R7s" id="nng-jI-Dgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4KH-Eh-OgW">
+                    <connections>
+                        <action selector="sourceImageTapped:" destination="BYZ-38-t0r" id="hnC-8H-BR7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="dXP-CV-AHG">
+                    <connections>
+                        <action selector="shareImageTapped:" destination="BYZ-38-t0r" id="4gf-tz-9PG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
